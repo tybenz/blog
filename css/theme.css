@@ -1,0 +1,182 @@
+body {
+	background-color: #111;
+	color: #eee;
+}
+
+h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3:visited, h4 a, h4 a:visited {
+	color: #eee;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #eee;
+}
+
+.header {
+	position: relative;
+}
+
+.header h2 {
+	margin-top: 20px;
+}
+
+.header h2 a {
+	color: #2FED52;
+}
+
+hr {
+	border-color: #F32712;
+}
+
+.header .social {
+	overflow: visible;
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+}
+
+.header .social #github .gh-btn {
+	color: #333;
+}
+
+.footer {
+	margin-top: 20px;
+}
+
+.footer .container {
+	padding: 5px 10px;
+	border-top: 1px solid #F32712;
+}
+
+.footer .copy {
+	float: right;
+	font-size: 10px;
+	color: #329BB5;
+}
+
+.blue {
+	color: #329BB5;
+}
+
+.nav {
+	list-style: none;
+	padding: 0;
+	font-size: 22px;
+}
+
+.nav a {
+	color: #329BB5;
+	text-decoration: none;
+}
+
+.nav a:hover {
+	padding-left: 3px;
+}
+
+.post .post-header {
+	position: relative;
+	border-bottom: 1px solid #F32712;
+	margin-bottom: 10px;
+}
+
+.post .post-header .date {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 12px;
+}
+
+.post .post-body {
+	padding-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.post .post-body img {
+	max-width: 250px;
+	float: left;
+	margin: 0 15px 5px 0;
+}
+
+.block {
+	border-bottom: 1px solid #F32712;
+	margin-bottom: 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+#contact-form input:not([type=submit]), #contact-form textarea {
+	width: 100%;
+	color: #000;
+}
+
+#contact-form .field {
+	position: relative;
+}
+
+#contact-form .field label {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	color: #000;
+}
+
+#contact-form .field.focus label {
+	color: #999;
+}
+
+#contact-form .field.not-empty label {
+	display: none;
+}
+
+#twitter-small {
+	display: none;
+}
+
+.flash {
+	color: #329BB5;
+	margin: 5px 10px;
+	float: left;
+}
+
+p a, p a:hover, p a:active, p a:hover {
+	color: #329BB5;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.header hr {
+		margin-bottom: 10px;
+	}
+	
+	.nav {
+		font-size: 18px;
+		margin-bottom: 40px;
+	}
+	
+	.nav li {
+		float: left;
+		margin: 0 24px;
+	}
+	
+	.nav li a:hover {
+		padding-left: 0;
+	}
+	
+	#github {
+		display: none
+	}
+	
+	#twitter-big {
+		display: none;
+	}
+	
+	#twitter-small {
+		display: inline;
+	}
+}

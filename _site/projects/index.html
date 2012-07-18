@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>Tyler Benziger</title>
+	<meta name="description" content="Developer site of Tyler Benziger">
+	<meta name="author" content="Tyler Benziger">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/prettify.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="/img/favicon.png">
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/blog.js"></script>
+	<script type="text/javascript" src="/js/prettify.js"></script>
+	<script type="text/javascript" src="/js/lang-css.js"></script>
+	<script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33073396-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+	</script>
+</head>
+<body onload="prettyPrint();">
+    
+    <div class="header">
+        <div class="container">
+            <h2><a href="/">tybenz</a></h2>
+            <span class="social">
+                <span id="twitter-big"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false">Follow @tybenz</a></span>
+                <span id="twitter-small"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @tybenz</a></span>
+                <iframe id="github" src="http://markdotto.github.com/github-buttons/github-btn.html?user=tybenz&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="111px" height="20px"></iframe>
+            </span>
+            <hr>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="container">
+            <div class="one-third column">
+                <ul class="nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="two-thirds column">
+                <div class="post">
+    <div class="post-header">
+        <h3 id="gitdrop"><a href="http://tybenz.github.com/gitdrop">GitDrop</a></h3>
+    </div>
+    
+    <p>
+        A small utility for quickly adding files to a Github repo.
+    </p>
+    <p>
+        I wanted a way to quickly add pictures to a GitHub Page. So I wrote a shell script that lets me quickly
+        add a file to a repo, push to a remote, and copy the URL into my clipboard for quick sharing. I then wrapped
+        this script in a Mac App so it's "droppable".
+    </p>
+    <p>
+        I've found it incredibly useful. In fact, I modified this script
+        to allow me to quickly add new posts to my blog and automatically tweet about them.
+        Check out the GitDrop home page to read more about it ( <a href="http://tybenz.github.com/gitdrop">here</a> ).
+    </p>
+</div>
+
+<div class="post">
+    <div class="post-header">
+        <h3 id="ajaxAppend"><a href="http://tybenz.github.com/ajaxAppend">AjaxAppend</a></h3>
+    </div>
+    
+    <p>
+        A jQuery Plugin for autonomous template injection (For use with Rails UJS Ajax calls)
+    </p>
+    
+    <p>
+        As I began to experiment with Rails more and more, I noticed a <a href="/post/welcome">pattern</a> when making
+        CRUD calls via AJAX. Adding things to the database often involved appending some new set of markup to my
+        document on the clientside. So I wrote AjaxAppend. It leverages HTML templating and the Rails "ajax:sucess" event
+        to automatically use JSON from an XHR response to create and append some set of markup.
+    </p>
+    
+    <p>
+        I realize that this plugin doesn't have to be Rails-specific. The next thing on my list is to allow for AjaxAppend
+        to work with any event and bind to the success method of any ajax call.
+    </p>
+</div>
+
+<div class="post">
+    <div class="post-header">
+        <h3 id="morph"><a href="http://github.com/blacktunnel/morph">Morph</a></h3>
+    </div>
+    
+    <p>
+        An HTML5 game with blocks, boats, and bots
+    </p>
+    
+    <p>
+        I found myself constantly doodling the same character over and over. I called him block man (he was often sketched on
+        graph paper), and I started sketching other types of critters and objects in a similar 9x9 grid. I sat down and stared at
+        what I'd drawn and decided I wanted to make a game based off of these different shapes. First question was which of these
+        shapes would be my protagonist? Answer: all of them.
+    </p>
+    
+    <p>
+        The game is based on a shape-shifter who can transform into different things and gain unique abilities in each form. I 
+        chose the generic codename Morph and started sketching other objects/characters/enemies that would inhabit this virtual 2D
+        world. Here's an early preview of the sprites that will be used in the game:
+    </p>
+    
+    <div><img src="/img/sprites.png" alt="Image Broken" /></div>
+    
+    <p>
+        Side note: I'm tentatively planning on making the game an platform-based open-world RPG. <a href="/contact">Thoughts</a>?
+    </p>
+</div>
+
+<div class="post">
+    <div class="post-header">
+        <h3 id="grocery-monkey">Grocery Monkey <span class="blue">*</span></h3>
+    </div>
+    
+    <p>A grocery list app to organize recipes cross-referenced with the map/layout of a specific grocery store</p>
+    
+    <p>
+        My wife and I have developed this weekly ritual where we sit down and choose which recipes we want to cook
+        throughout the week. We then write up a shopping list based on what's missing from the pantry and head out
+        to stock up for the week, only to end up walking the full-length of the grocery store confused as to which item
+        to grab next (I'm aware this is a first world problem).
+    </p>
+    
+    <p>
+        So why all the confusion? The list is not sorted in a particular order. We simply went through each recipe and
+        wrote down what we needed to make it. So I want to write an app where we can store our recipes, quickly select which ones
+        we want for a shopping trip, and have it add all the items into a list sorted by location in the grocery store.
+        This way we avoid all the wandering and we can get in and out of there fast.
+    </p>
+</div>
+
+<div class="post">
+    <div class="post-header">
+        <h3 id="trx">ThemeRollerX <span class="blue">*</span></h3>
+    </div>
+    
+    <p>
+        A universal theming application for any CSS framework
+    </p>
+    
+    <p>
+        ThemeRoller for jQuery Mobile ended up having some cool features for theming jQm apps. I'd like to take what I did with
+        ThemeRoller and write an app that can be easily configured to work with more than just one specific CSS framework.
+    </p>
+    
+    <p>
+        For now I'm thinking to start by building a theming tool for a different CSS framework and porting over some of
+        the TR UI elements to work more generically. I'll start with Twitter's Bootstrap, and see what I can learn about
+        how to generalize the solution. You can bet I'll blog about what I find.
+    </p>
+</div>
+
+<p class="blue footnote">* I haven't started on these projects just yet</p>
+</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <span class="copy">&copy; Tyler Benziger 2012</span>
+        </div>
+    </div>
+    
+</body>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</html>

@@ -1,0 +1,84 @@
+---
+title: Blogging Like a Hacker
+---
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>Tyler Benziger</title>
+	<meta name="description" content="Developer site of Tyler Benziger">
+	<meta name="author" content="Tyler Benziger">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/prettify.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="/img/favicon.png">
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/blog.js"></script>
+	<script type="text/javascript" src="/js/prettify.js"></script>
+	<script type="text/javascript" src="/js/lang-css.js"></script>
+	<script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33073396-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+	</script>
+</head>
+<body onload="prettyPrint();">
+    
+    <div class="header">
+        <div class="container">
+            <h2><a href="/">tybenz</a></h2>
+            <span class="social">
+                <span id="twitter-big"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false">Follow @tybenz</a></span>
+                <span id="twitter-small"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @tybenz</a></span>
+                <iframe id="github" src="http://markdotto.github.com/github-buttons/github-btn.html?user=tybenz&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="111px" height="20px"></iframe>
+            </span>
+            <hr>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="container">
+            <div class="one-third column">
+                <ul class="nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="two-thirds column">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <span class="copy">&copy; Tyler Benziger 2012</span>
+        </div>
+    </div>
+    
+</body>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</html>

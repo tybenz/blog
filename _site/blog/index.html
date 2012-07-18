@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>Tyler Benziger</title>
+	<meta name="description" content="Developer site of Tyler Benziger">
+	<meta name="author" content="Tyler Benziger">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/prettify.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="/img/favicon.png">
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/blog.js"></script>
+	<script type="text/javascript" src="/js/prettify.js"></script>
+	<script type="text/javascript" src="/js/lang-css.js"></script>
+	<script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33073396-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+	</script>
+</head>
+<body onload="prettyPrint();">
+    
+    <div class="header">
+        <div class="container">
+            <h2><a href="/">tybenz</a></h2>
+            <span class="social">
+                <span id="twitter-big"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false">Follow @tybenz</a></span>
+                <span id="twitter-small"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @tybenz</a></span>
+                <iframe id="github" src="http://markdotto.github.com/github-buttons/github-btn.html?user=tybenz&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="111px" height="20px"></iframe>
+            </span>
+            <hr>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="container">
+            <div class="one-third column">
+                <ul class="nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="two-thirds column">
+                
+ 
+  <div class="post">
+      <div class="post-header">
+          <h4>
+              <a href="/2012/07/18/patterns.html">Patterns</a>
+          </h4>
+          <span class="date">11:32pm July 18, 2012</span>
+      </div>
+      <div class="post-body">
+        <p>For my first post, I&#8217;d like to talk a little about patterns.</p>
+
+<p>Most programmers are puzzle solvers. We sit and tinker all day trying to solve interesting problems, or most often, solving problems we&#8217;ve created ourselves. The most rewarding part of this puzzle solving, is when a pattern is identified, and an association is made. Simplifying these patterns into reusable pieces of code is what makes programming fun. I know I&#8217;m most proud of code that I&#8217;ve written that is highly reusable.</p>
+
+<p>What typically happens is that programmers will put off writing truly reusable code until absolutely necessary. I do, and so does everyone else. I&#8217;ve outlined a little bit of what typical puzzle solving looks like (at least for me):</p>
+
+<ol>
+<li>
+<p>Button Mashing</p>
+
+<ul>
+<li>I start prototyping a solution to a problem</li>
+
+<li>I throw good coding practices out the window and just try to get results on the screen</li>
+</ul>
+</li>
+
+<li>
+<p>Refactoring</p>
+
+<ul>
+<li>I spend hours and hours tweaking code to be more readable/efficient/reusable</li>
+</ul>
+</li>
+
+<li>
+<p>Epiphany</p>
+
+<ul>
+<li>I realize some subset of my new code is similar to something I&#8217;ve written before</li>
+
+<li>I create some small utility/API that is tailor-made for a certain coding pattern</li>
+</ul>
+</li>
+</ol>
+
+<p>Quickly, I&#8217;ll say that the big time-suck in Step 2 can be reduced if better code is written from the start. Understandably, outside factors can make this impractical (e.g. time constraints, rapid prototyping, etc). I&#8217;d still recommend finding the balance between an accurate, fast prototype, and a clean implementation as much as possible.</p>
+
+<p>Now, where does the pattern come in? What I&#8217;d really like to focus on is Step 3. This Epiphany is usually what spawns excellent libaries/widgets/gems/APIs.</p>
+
+<p>Let&#8217;s walk through a more concrete example.</p>
+
+<p>Recently, I was messing around with Ruby on Rails and I had started added some client-side/server-side communication via AJAX. I&#8217;ll take you through a smaller, similar app and see if you can spot the pattern.</p>
+
+<p>Let&#8217;s design a Grocery List application. The user can create Lists which contain multiple Items. We&#8217;ll have a unalterable, finite set of possible items the user might want on a list. If we wanted to create a page where the list can be built out on the client-side and then pushed to the server to save the list, we&#8217;d need a way of querying for items, as well as some button to submit the completed list.</p>
+
+<p>Here&#8217;s some code:</p>
+
+<pre><code>&lt;!-- Submit this form with the name of the item to get back data from server --&gt;
+&lt;form id=&quot;get-items&quot; action=&quot;/items&quot; method=&quot;get&quot; data-remote=&quot;true&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;items[name]&quot; /&gt;
+    
+    &lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+&lt;table id=&quot;grocery-list&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1.&lt;/td&gt;
+            &lt;td&gt;First Item&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- Add new row here with the new item --&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<p>And some more:</p>
+
+<pre><code>// JS to grab data passed back from server and append row to the table
+$( &quot;#get-items&quot; ).bind( &quot;ajax:success&quot;, function( evt, data, status, xhr ) {
+    var data = JSON.parse( xhr.responseText );
+
+    listData.push( data ); //listData = global array of Items
+    $( &quot;#grocery-list tbody&quot; ).append( &quot;&lt;tr&gt;&lt;td&gt;&quot; + itemCount +
+        &quot;.&lt;/td&gt;&lt;td&gt;&quot; + data.name + &quot;&lt;/td&gt;&lt;/tr&gt;&quot; );
+});</code></pre>
+
+<p>And some more:</p>
+
+<pre><code>// User clicks the save-list button and gets back
+// a confirmation message from the server
+$( &quot;button#save-list&quot; ).click( function() {
+    $.ajax({
+        url: &quot;/lists&quot;,
+        type: &quot;post&quot;,
+        data: listData,
+        dataType: &#39;json&#39;,
+        success: function( response ) {
+            var data = JSON.parse( response );
+            
+            $( &quot;body&quot; ).append( &#39;&lt;div class=&quot;confirmation-message&quot;&gt;&#39; +
+                data.confirm + &#39;&lt;/div&gt;&#39; );
+        }
+    })
+});</code></pre>
+
+<p>Notice the pattern? It&#8217;s actually something that is quite common in web apps. When submitting data/requests via AJAX, there is always some sort of follow-up action performed on the client side, typically appending some new set of markup somewhere to display response data.</p>
+
+<p>So I decided to create a generic way to respond to these AJAX calls. By leveraging a templating tool like <a href='http://mustache.github.com/'>mustache.js</a>, or <a href='http://underscorejs.org/#template'>underscore</a>, it was easy to write a utility to listen for AJAX responses, and append a template, populated with the response data. I found this tool incredibly useful, and I&#8217;m still working on making it more universal to the task. It&#8217;s called AjaxAppend and you can read more about it <a href='/work'>here</a> or <a href='http://tybenz.github.com/ajaxAppend'>here</a>.</p>
+
+<p>You see that with a simple example like one above, pointing out these patterns in your mind can save you, and potentially others, a lot of time in the long run (provided you take the time to do something about it). Now when I need this type of AJAX/JSON/Markup workflow in an app, I write a few lines of JS, and I&#8217;m done.</p>
+
+<p>So there it is.</p>
+
+<p>Bad Code -&gt; Pattern -&gt; Simplify Problem -&gt; Widget/Plugin/Function/API/etc</p>
+
+<p>What I&#8217;ve outlined here, is a workflow for putting together reusable utilities. While it may seem slow and imperfect, the truth is there aren&#8217;t a lot of other options. Most programmers don&#8217;t have the gift of foresight, so for now, this retroactive simplification of repetitive code will have to do. Make sure you keep your eyes peeled for patterns that can be taken advantage of, and tweet/message me some patterns you&#8217;ve identified and what you did about it.</p>
+      </div>
+  </div>
+ 
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <span class="copy">&copy; Tyler Benziger 2012</span>
+        </div>
+    </div>
+    
+</body>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</html>
