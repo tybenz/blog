@@ -1,6 +1,3 @@
----
-title: Tyler Benziger
----
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -68,7 +65,17 @@ title: Tyler Benziger
                 </ul>
             </div>
             <div class="two-thirds column">
-                {{ content }}
+                <div class="post">
+                    <div class="post-header">
+                        <h4>
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </h4>
+                        <span class="date">{{ page.date | date: "%l:%M%P %B %e, %Y" }}</span>
+                    </div>
+                    <div class="post-body">
+                        {{ content }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
