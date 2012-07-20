@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Blogging Like a Hacker
+title: Blog
 ---
 
 {% for post in site.posts %}
  
   <div class="post">
       <div class="post-header">
-          <h4>
+          <h1>
               <a href="{{ post.url }}">{{ post.title }}</a>
-          </h4>
+          </h1>
           <span class="date">{{ post.date | date: "%l:%M%P %B %e, %Y" }}</span>
       </div>
       <div class="post-body">
