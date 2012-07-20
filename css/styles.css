@@ -169,8 +169,6 @@ a:visited {
 	margin-right: 10px;
 }
 
-
-
 .project {
 	width: 100%;
 	height: 300px;
@@ -233,6 +231,10 @@ a:visited {
 
 .project.small {
 	width: 250px;
+}
+
+pre {
+	overflow-x: auto;
 }
 
 
