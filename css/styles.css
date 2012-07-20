@@ -257,6 +257,10 @@ pre {
 		width: 100%;
 		height: 200px;
 	}
+	
+	.post, p {
+		font-size: 18px;
+	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
