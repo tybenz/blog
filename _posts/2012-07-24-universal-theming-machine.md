@@ -2,7 +2,6 @@
 layout: post
 title: UTM
 date: 2:08PM July 24, 2012
-hide: true
 ---
 
 Working on ThemeRoller was a lot of fun and it taught me a lot about client-side styling and user interfaces in general.
@@ -30,11 +29,25 @@ customized version of the tool, but at the end of the day the basic ingredients 
 What are those ingredients? Glad you asked:
 
 1. Fast, light-weight parsing of any CSS file
-2. An inspector tool for point and click edits
-3. Draggable colors with customizable behaviors
-4. Undo/Redo Logs of every action the user makes
-5. Downloadable/Shareable themes
+2. UI elements specialized towards various CSS rules
+3. Colorpicker
+4. An inspector tool for point and click edits
+5. Draggable colors with customizable behaviors
+6. Undo/Redo Logs of every action the user makes
+7. Downloadable/Shareable themes
+
+As far as parsing goes, for now I'm thinking that the API will mostly handle the business logic of the actual skinning.
+But the rules that a user has access to will need to be specified by the developer. This can be done with some esoteric CSS
+comment for every rule that needs to be represented in the UI. Or, more likely, some specific JSON that the developer could write
+out quickly that would list which rules are editable, and how they are grouped.
+
+The potential for this app extends beyond just the big-name frameworks. The tool could also be used when designing a site
+for a client. I'll give you a scenario. You whip up a site design, and your client is unhappy with your choice of typeface,
+color, spacing, etc, but he likes the overall layout. Why bother iterating on color choices? Design a solid layout, and then let
+the clients skin the page themselves. All you do is provide a base theme that can be easily tweaked. Sounds nice right? 
 
 Ok, so there's the overall outline. I'd love to get some feedback on the idea, as well as any questions/suggestions you
-might have about implementing this thing. Give me a shout-out on [Twitter](http://twitter.com/tybenz)
-or [email](mailto:tabenziger@gmail.com) me.
+might have about implementing this thing. Give me a shout-out on [Twitter](http://twitter.com/tybenz), [email](mailto:tabenziger@gmail.com) me or submit a ticket on the [github](http://github.com/tybenz/UTM)
+
+Note: this project is nothing more than a thought for now, so no, there's no source code to look at. Check back later for
+updates. It will be soon.
