@@ -6,7 +6,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Tyler Benziger</title>
+	<title>Tyler Benziger | {{ page.title }}</title>
 	<meta name="description" content="Developer site of Tyler Benziger">
 	<meta name="author" content="Tyler Benziger">
 
@@ -44,7 +44,7 @@
     
     <div class="header">
         <div class="container">
-            <h1>{{ page.title }}</h1>
+            <h1>POST</h1>
             <span class="social">
                 <span id="twitter-big"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false">Follow @tybenz</a></span>
                 <iframe id="github" src="http://markdotto.github.com/github-buttons/github-btn.html?user=tybenz&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="111px" height="20px"></iframe>
@@ -69,7 +69,7 @@
         <div class="container">
             <div class="post">
                 <div class="post-header">
-                    <br />
+                    <h1>{{ page.title }}</h1>
                     <span class="date">{{ page.date | date: "%l:%M%P %B %e, %Y" }}</span>
                 </div>
                 <div class="post-body">
