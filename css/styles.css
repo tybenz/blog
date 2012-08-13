@@ -134,6 +134,8 @@ a:visited {
 
 .banner.footer {
 	margin-bottom: 0;
+	color: #eee;
+	background-color: #222;
 }
 
 .footer .copyright {
@@ -141,8 +143,9 @@ a:visited {
 	font-size: 14px;
 }
 
-.post, p {
+.post p {
 	font-size: 20px;
+	color: #000;
 }
 
 .post .post-header {
@@ -258,7 +261,7 @@ pre {
 		height: 200px;
 	}
 	
-	.post, p {
+	.post p {
 		font-size: 18px;
 	}
 }
