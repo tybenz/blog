@@ -12,21 +12,16 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="/css/styles.css">
-	<link rel="stylesheet" href="/css/prettify.css">
-	<link rel="stylesheet" href="/css/bitstream.css">
-	<link rel="stylesheet" href="/css/theme.css">
-
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<link rel="shortcut icon" href="/img/favicon.png">
 	
-	<script type="text/javascript" src="/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/blog.js"></script>
-	<script type="text/javascript" src="/js/prettify.js"></script>
-	<script type="text/javascript" src="/js/lang-css.js"></script>
+  <link href="/css/bitstream.css" type="text/css" rel="stylesheet">
+  <link href="/css/styles.css" type="text/css" rel="stylesheet">
+  <link href="/css/prettify.css" type="text/css" rel="stylesheet">
+
 	<script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -42,48 +37,32 @@
 </head>
 <body onload="prettyPrint();">
     
-    <div class="header">
-        <div class="container">
-            <h1>POST</h1>
-            <span class="social">
-                <span id="twitter-big"><a href="https://twitter.com/tybenz" class="twitter-follow-button" data-show-count="false">Follow @tybenz</a></span>
-                <iframe id="github" src="http://markdotto.github.com/github-buttons/github-btn.html?user=tybenz&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="111px" height="20px"></iframe>
-            </span>
-            <div class="small banner">
-                <h3>Tyler Benziger</h3>
-            </div>
+  <div class="sidebar">
+    <h1>Tyler Benziger</h1>
+    <ul class="nav">
+      <li>
+        <a href="/">About</a>
+      </li>
+      <li>
+        <a href="/blog">Blog</a>
+      </li>
+      <li>
+        <a href="/projects">Projects</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="post">
+        <div class="post-header">
+            <h2>{{ page.title }}</h2>
+            <span class="date">{{ page.date | date: "%l:%M%P %B %e, %Y" }}</span>
+        </div>
+        <div class="post-body">
+            {{ content }}
         </div>
     </div>
-    
-    <div class="banner">
-        <div class="container">
-            <ul class="nav clearfix">
-                <li><a href="/">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/projects">Work</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="main">
-        <div class="container">
-            <div class="post">
-                <div class="post-header">
-                    <h1>{{ page.title }}</h1>
-                    <span class="date">{{ page.date | date: "%l:%M%P %B %e, %Y" }}</span>
-                </div>
-                <div class="post-body">
-                    {{ content }}
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="banner footer">
-        <div class="container clearfix">
-            <p class="copyright">&copy; Tyler Benziger 2012</p>
-        </div>
-    </div>
+  </div>
     
 </body>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

@@ -1,2 +1,3 @@
 destination: /Users/tbenzige/Projects/test
 permalink: /post/:title
+pygments: true
