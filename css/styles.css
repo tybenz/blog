@@ -35,6 +35,7 @@ a, a:hover, a:active, a:visited {
 
 .sidebar .header img {
   border-radius: 30px;
+  -webkit-border-radius: 30px;
   width: 60px;
 }
 
@@ -56,6 +57,20 @@ a, a:hover, a:active, a:visited {
 .sidebar .nav li a {
   text-decoration: none;
   color: inherit;
+}
+
+.sidebar .social {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+
+.sidebar .social a {
+  margin: 0 2px;
+}
+
+.sidebar .social img {
+  border: 2px solid white;
 }
 
 .main {
@@ -98,6 +113,7 @@ a, a:hover, a:active, a:visited {
     top: 0;
     height: 100px;
     width: 100%;
+    min-width: 280px;
   }
   
   .sidebar .header img {
@@ -117,6 +133,21 @@ a, a:hover, a:active, a:visited {
     float: left;
     padding: 0;
     margin-right: 20px;
+  }
+
+  .sidebar .social {
+    right: 10px;
+    left: auto;
+    bottom: 10px;
+  }
+
+  .sidebar .social a {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .sidebar .social img {
+    width: 25px;
   }
 
   .main {
