@@ -9,10 +9,6 @@ body {
   min-width: 320px;
 }
 
-a, a:hover, a:active, a:visited {
-  color: #00f;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Verdana', Helvetica, Arial, sans-serif;
 }
@@ -23,10 +19,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 210px;
   min-width: 210px;
   padding: 20px;
-  background-color: #1D1F21;
   position: fixed;
   left: 0;
-  color: #e5e5e5;
 }
 
 .sidebar .header h1 {
@@ -45,14 +39,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar .nav li {
-  color: #BA100E;
   font-size: 20px;
   padding: 10px;
   margin: 0 -7px 0 -10px;
-}
-
-.sidebar .nav li:hover {
-  background-color: #000;
 }
 
 .sidebar .nav li a {
@@ -70,10 +59,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 2px;
 }
 
-.sidebar .social img {
-  border: 2px solid white;
-}
-
 .main {
   min-width: 230px;
   max-width: 750px;
@@ -83,9 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post .post-header {
   position: relative;
-  border-bottom: 1px solid black;
   margin-bottom: 10px;
-  color: #65ADEF;
 }
 
 .post .post-header h2 {
