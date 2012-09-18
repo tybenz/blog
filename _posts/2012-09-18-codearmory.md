@@ -1,5 +1,4 @@
 ---
-hide: true
 layout: post
 title: Code Armory
 date: 9:51am September 18, 2012 
