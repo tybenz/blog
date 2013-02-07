@@ -28,7 +28,7 @@ The resulting script keeps a running count of how many URLs have been
 generated, generates a hash on that value, creates a directory with that
 hash as its name and injects a simple Javascript redirect into an
 index.html document inside that directory, and pushes the GitHub Repo.
-Deploying a URL that looks something like: http://awes0.me/cNe.
+Deploying a URL that looks something like: http://awes0.me/K6g.
 
 And that's it. I can now shorten URLs to my heart's content. No PHP, no
 paid hosting, no headaches. You can view the source [here](https://github.com/tybenz/awes0.me/blob/gh-pages/urlshort.sh).
