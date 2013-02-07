@@ -31,4 +31,4 @@ index.html document inside that directory, and pushes the GitHub Repo.
 Deploying a URL that looks something like: http://awes0.me/K6g.
 
 And that's it. I can now shorten URLs to my heart's content. No PHP, no
-paid hosting, no headaches. You can view the source [here](https://github.com/tybenz/awes0.me/blob/gh-pages/urlshort.sh).
+paid hosting, no headaches. You can view the source [here](https://gist.github.com/4735033).
