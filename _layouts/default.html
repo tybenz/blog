@@ -1,71 +1,71 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!doctype html>
+<html>
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<meta charset="utf-8">
-	<title>Tyler Benziger | {{ page.title }}</title>
-	<meta name="description" content="Developer site of Tyler Benziger">
-	<meta name="author" content="Tyler Benziger">
+<title>{{ title }}</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-  <link href="/css/bitstream.css" type="text/css" rel="stylesheet">
-  <link href="/css/styles.css" type="text/css" rel="stylesheet">
-  <link href="/css/default.css" type="text/css" rel="stylesheet">
-  <link href="/css/code.css" type="text/css" rel="stylesheet">
-	<link rel="shortcut icon" href="/img/favicon.png">
-
-	<script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-33073396-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-	</script>
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/mobile.css">
+<link rel="stylesheet" href="/css/desktop.css" media="(min-width: 50em)">
+<link rel="stylesheet" href="/css/pygments.css">
+<link rel="stylesheet" href="/css/font.css">
+<script type="text/javascript" charset="utf-8" src="/js/matchmedia.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/picturefill.js"></script>
 </head>
+
 <body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <div class="profile">
+                <div class="social">
+
+                    <div data-picture data-alt="Twitter">
+                        <div data-src="/img/twitter16.png"></div>
+                        <div data-src="/img/twitter32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
+                        <noscript><img src="/img/twitter16.png" alt="Twitter"></noscript>
+                    </div>
+                    <div data-picture data-alt="Github">
+                        <div data-src="/img/octocat16.png"></div>
+                        <div data-src="/img/octocat32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
+                        <noscript><img src="/img/octocat16.png" alt="Github"></noscript>
+                    </div>
+                </div>
+                <img src="/img/tybenz.png" alt="" class="avatar" />
+            </div>
+            <h5 class="logo"><a href="/">Tyler Benziger</a></h5>
+            <nav>
+                <ul>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                </ul>
+            </nav>
+            <div class="nav-slider">
+                <div class="nav-selection {{ page.nav }}"></div>
+            </div>
+        </div>
+    </header>
     
-  
-  <div class="sidebar">
-    <div class="header">
-      <img src="/img/tybenz.png">
-      <h1>Tyler Benziger</h1>
-    </div>
-    <ul class="nav">
-      <li>
-        <a href="/">About</a>
-      </li>
-      <li>
-        <a href="/blog">Blog</a>
-      </li>
-      <li>
-        <a href="/projects">Projects</a>
-      </li>
-    </ul>
-    <div class="social">
-      <a href="http://github.com/tybenz">
-        <img src="/img/octocat.png" alt="" />
-      </a>
-      <a href="http://twitter.com/tybenz">
-        <img src="/img/twitter.png" alt="" />
-      </a>
-    </div>
-  </div>
-
-  <div class="main">{{ content }}</div>
-
+    <section id="main">
+        <article class="container">
+            {% if page.nav != "blog" %}
+                <h1 class="hero">{{page.title}}</h1>
+            {% endif %}
+            {{content}}
+        </article>
+    </section>
+    
+    <footer>
+        <nav class="container">
+            <ul>
+                <li>&copy; Tyler Benziger 2013</li>
+            </ul>
+        </nav>
+    </footer>
+</div>
 </body>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </html>

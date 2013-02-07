@@ -1,73 +1,75 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!doctype html>
+<html>
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<meta charset="utf-8">
-	<title>Tyler Benziger | {{ page.title }}</title>
-	<meta name="description" content="Developer site of Tyler Benziger">
-	<meta name="author" content="Tyler Benziger">
+<title>{{ title }}</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<link rel="shortcut icon" href="/img/favicon.png">
-	
-  <link href="/css/bitstream.css" type="text/css" rel="stylesheet">
-  <link href="/css/styles.css" type="text/css" rel="stylesheet">
-  <link href="/css/default.css" type="text/css" rel="stylesheet">
-  <link href="/css/code.css" type="text/css" rel="stylesheet">
-
-	<script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-33073396-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-	</script>
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/mobile.css">
+<link rel="stylesheet" href="/css/desktop.css" media="(min-width: 50em)">
+<link rel="stylesheet" href="/css/pygments.css">
+<link rel="stylesheet" href="/css/font.css">
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery.min.js"></script>
 </head>
-<body>
-    
-  <div class="sidebar">
-    <div class="header">
-      <img src="/img/tybenz.png">
-      <h1>Tyler Benziger</h1>
-    </div>
-    <ul class="nav">
-      <li>
-        <a href="/">About</a>
-      </li>
-      <li>
-        <a href="/blog">Blog</a>
-      </li>
-      <li>
-        <a href="/projects">Projects</a>
-      </li>
-    </ul>
-  </div>
 
-  <div class="main">
-    <div class="post">
-        <div class="post-header">
-            <h2>{{ page.title }}</h2>
-            <span class="date">{{ page.date | date: "%l:%M%P %B %e, %Y" }}</span>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <img src="/img/tybenz.png" alt="" />
+            <h5 class="logo"><a href="/">Tyler Benziger</a></h5>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">About</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/projects">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-slider">
+                <div class="nav-selection {{ page.nav }}"></div>
+            </div>
         </div>
-        <div class="post-body">
-            {{ content }}
-        </div>
-    </div>
-  </div>
+    </header>
     
+    <section id="main">
+        <article class="container">
+            <article class="post">
+                <div class="post-header">
+                    <p class="date">{{ page.date | date:"%b %d, %Y" }}</p>
+                    <h1>{{ page.title }}</h1>
+                </div>
+                <div class="post-body">
+                    {{ content }}
+                </div>
+            </article>
+        </article>
+    </section>
+    
+    <footer>
+        <nav class="container">
+            <ul>
+                <li>
+                <a href="#">Github</a>
+                </li>
+                <li>
+                <a href="#">Twitter</a>
+                </li>
+                <li>
+                <a href="#">Email</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</div>
 </body>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </html>
+

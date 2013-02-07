@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Code Armory
-date: 9:51am September 18, 2012 
 ---
 
 I've been using Gists a lot recently to pass code back and forth between
@@ -20,7 +19,7 @@ place to search for these small bits of wonder-code?
 I set out to see if it already existed, and it turns out that it
 doesn't. So I plan on creating one. 
 
-###Side Story
+#####Side Story
 My sister-in-law went into labor last week so my wife and I
 went down to Lemoore Naval Air Station to see the baby. As I was driving
 off the base I saw a sign indicating which way to turn to get to the
@@ -28,7 +27,7 @@ Armory. That's when it hit me. This code snippet site need not only
 focus on code snippets. I want to make it a place where developers get
 equipped in every way they need.
 
-###The Plan
+#####The Plan
 Offer the soliders (developers) a chance to stock up on weapons
 (snippets), load up on ammo (frameworks/libraries), engage in training
 (walkthroughs) and choose their
@@ -36,7 +35,7 @@ barracks (development environments). The latter will most likely allow
 for users to peruse various [vagrant](http://vagrantup.com) boxes and
 associated chef recipes (if you don't know about vagrant, get it).
 
-###Implementation
+#####Implementation
 Like I said I love Gists. Rather than re-inventing the wheel 
 this new project is simply going to
 leverage gists. I'll add some meta-data to various gists to create a place
@@ -47,7 +46,7 @@ busy. You know, redefining how everyone codes? They might
 get around to improving Gist, but for now, I'm taking it upon myself.
 Who's with me?
 
-###I Need Help
+#####I Need Help
 I don't know about you, but this sounds like a dream to me. But I'm
 going to need help in getting some solid content onto this site. If you
 can help spread the word, or send me some code snippets you've found to
