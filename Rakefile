@@ -12,8 +12,6 @@ CONFIG = {
 desc "Generate Jekyll site"
 task :generate do
   puts "Generating site with Jekyll..."
-  system "sass --update _sass:css/ -f -r ./_sass/bourbon/lib/bourbon.rb"
-  system "jekyll --no-auto"
   exec(<<-CMD)
     set -e
     sass --update _sass:css/ -f -r ./_sass/bourbon/lib/bourbon.rb
