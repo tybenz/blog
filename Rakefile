@@ -18,6 +18,8 @@ task :generate do
     jekyll --no-auto --pygments;
     git checkout gh-pages;
     cp -r _site/* .;
+    rm -Rf _site;
+    rm -Rf .sass-cache;
     git add .;
     git commit -m "updating gh-pages";
     git checkout master;
