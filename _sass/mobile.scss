@@ -248,7 +248,7 @@ ul {
 }
 
 .key-selector a.active {
-    background-color: #6ab825;
+    background-color: $blue;
 }
 
 .button:hover, .button:active {
@@ -280,7 +280,7 @@ pre {
 }
 
 .chords strong {
-    color: #6ab825;
+    color: $blue;
 }
 
 @media only screen and (min-width: 40em) {
