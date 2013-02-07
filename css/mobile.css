@@ -89,7 +89,7 @@ header .nav-selection {
 
 header .nav-selection.about {
   width: 44px;
-  left: 52px; }
+  left: 49px; }
 
 header .nav-selection.blog {
   width: 33px;
@@ -97,7 +97,7 @@ header .nav-selection.blog {
 
 header .nav-selection.projects {
   width: 60px;
-  left: 117px; }
+  left: 107px; }
 
 header .profile {
   float: right;
@@ -221,8 +221,7 @@ ul {
   left: 50px; }
 
 pre {
-  font-family: 'Source Code Pro', monospace;
-  font-weight: lighter; }
+  font-family: 'Source Code Pro', monospace; }
 
 .chords {
   color: white; }
