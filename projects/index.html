@@ -6,22 +6,22 @@ title: Projects
 <section id="projects">
 {% for page in site.pages %}
   {% if page.project == true %}
-      <div class="project">
-          <div class="project-header">
-              <h2>
-                  {% if page.link %}
-                      <a href="{{ page.link }}">{{ page.title }}</a>
-                  {% else %}
-                      <a href="{{ page.url | replace: '/index.html', '' }}">{{ page.title }}</a>
-                  {% endif %}
-              </h2>
-          </div>
-          <div class="project-body">
-            <p>
-                {{ page.summary }}
-            </p>
-          </div>
-      </div>
+    {% if page.link %}
+      <a class="project" href="{{ page.link }}">
+    {% else %}
+      <a class="project" href="{{ page.url | replace: '/index.html', '' }}">
+    {% endif %}
+              <div class="project-header">
+                  <h2>
+                      {{ page.title }}
+                  </h2>
+              </div>
+              <div class="project-body">
+                <p>
+                    {{ page.summary }}
+                </p>
+              </div>
+      </a>
   {% endif %}
  
 {% endfor %}

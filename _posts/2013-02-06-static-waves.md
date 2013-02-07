@@ -5,11 +5,11 @@ title: Static Waves
 
 I thought I'd write a quick post about what I used to create this blog.
 
-1. Jekyll: Static site generator
-2. Sass: CSS preprocessor
-3. Bourbon: Set of generic Sass mixins
-4. Neat: Set of grid-based Sass mixins (dependent on Bourbon)
-5. Fonts: Bebas Neue, Adobe Source Sans Pro, Adobe Source Code Pro
+1. [Jekyll](http://jekyllrb.com/): Static site generator
+2. [Sass](http://sass-lang.com): CSS preprocessor
+3. [Bourbon](http://bourbon.io): Set of generic Sass mixins
+4. [Neat](http://neat.bourbon.io): Set of grid-based Sass mixins (dependent on Bourbon)
+5. Fonts: [Bebas Neue](http://www.fontsquirrel.com/fonts/bebas-neue), [Adobe Source Sans Pro](https://github.com/adobe/source-sans-pro), [Adobe Source Code Pro](https://github.com/adobe/source-code-pro)
 
 If you're not using Github Pages and Jekyll yet, get cracking. There is
 nothing I love more than to write a post in markdown, deploy it with
