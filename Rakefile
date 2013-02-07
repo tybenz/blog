@@ -20,6 +20,7 @@ task :generate do
     cp -r _site/* .;
     rm -Rf _site;
     rm -Rf .sass-cache;
+    rm -Rf _cache;
     git add .;
     git commit -m "updating gh-pages";
     git checkout master;
