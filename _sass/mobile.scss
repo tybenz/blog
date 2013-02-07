@@ -65,7 +65,7 @@ h5 {
 }
 
 h1.hero {
-    font-size: 5.5em;
+    font-size: 4.5em;
     margin: 0.3em 0 0.1em;
 }
 
@@ -210,6 +210,7 @@ ul {
 }
 
 .project {
+    display: block;
     border: 1px solid $lightGrey;
     margin-bottom: 2.35765%;
     @include pad;
@@ -218,6 +219,10 @@ ul {
         border-color: $indigo;
         text-decoration: none;
     }
+}
+
+.project h2 {
+  font-size: 3em;
 }
 
 .project:nth-child(2n) {
@@ -296,8 +301,10 @@ pre {
     .pagination a {
         @include span-columns(3);
     }
-}
-@media only screen and (min-width: 40em) {
+
+    .project h2 {
+        font-size: 3.5em;
+    }
 
     header .avatar {
         display: block;
