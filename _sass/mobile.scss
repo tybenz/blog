@@ -85,7 +85,11 @@ p {
 
 header a {
     color: inherit;
+    &:hover {
+        text-decoration: none;
+    }
 }
+
 header nav ul {
     font-size: 16px;
     @include clearfix;
@@ -100,7 +104,9 @@ header .logo {
 
 header nav ul li {
     float: left;
-    margin-right: 20px;
+    a {
+        padding-right: 20px;
+    }
 }
 
 header .nav-slider {
@@ -149,7 +155,7 @@ header .social img {
 
 header .avatar {
     height: 58px;
-    border: 5px solid $black;
+    border: 2px solid $black;
     float: left;
     margin-left: 10px;
     display: none;
@@ -193,6 +199,7 @@ ul {
 
 .post {
     border-top: 1px solid $darkGrey;
+    margin-bottom: 5em;
 }
 
 .post:first-child {
