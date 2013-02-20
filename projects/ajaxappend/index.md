@@ -9,7 +9,6 @@ tar:
 summary: Javascript plugin to tie AJAX responses to template injection
 ---
 
-## About
 
 This is a jQuery Plugin designed to work with Rail's UJS remote forms.
 It makes it easier to automatically inject populated templates into your page based on a JSON AJAX response.
