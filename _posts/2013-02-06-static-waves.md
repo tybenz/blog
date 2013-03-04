@@ -1,5 +1,6 @@
 ---
 layout: post
+nav: blog
 title: Static Waves
 ---
 

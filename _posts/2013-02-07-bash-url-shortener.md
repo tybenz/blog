@@ -1,5 +1,6 @@
 ---
 layout: post
+nav: blog
 title: "Bash URL Shortener"
 ---
 A couple months ago I got curious about URL shorteners and how they were

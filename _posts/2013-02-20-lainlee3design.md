@@ -1,5 +1,6 @@
 ---
 layout: post
+nav: blog
 hidden: true
 title: Lain Lee 3 Design
 ---
