@@ -1,7 +1,6 @@
 ---
 layout: post
 nav: blog
-hidden: true
 title: Lain Lee 3 Design
 ---
 Recently I was looking for a designer to collaborate with on a project
