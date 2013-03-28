@@ -32,7 +32,7 @@ Quick word about Lain as a designer/illustrator: this guy is one heck of
 an artist. Since we've started working together I've started to follow
 his work, and honestly, every thing the guy
 creates is pure gold. Check out this
-[timelapse](http://lainlee3design.com/avengers-assemble-timelapse) of his mad 
+[timelapse](http://lainlee3design.com/blog/avengers-assemble-timelapse) of his mad 
 illustration skills! The stuff he's designed for Code Armory is
 absolutely perfect. Excellent illustration, web design, and it totally
 lines up with my vision for this new project. I'll be sure to write more
