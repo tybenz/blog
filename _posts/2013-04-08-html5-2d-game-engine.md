@@ -15,7 +15,7 @@ myself to be a hardcore JS developer and after researching the various
 frameworks/engines that are available (it&#8217;s slim pickings by the way),
 I came to realization that I&#8217;d have much more fun/control if I
 wrote everything from scratch. I invited my friend
-[Robby](http://github.com/robbynickles) to join me in tackling the task.
+[Robby Nickles](http://github.com/robbynickles) to join me in tackling the task.
 Here&#8217;s what we did.
 
 **Disclaimer**: This is an overview of the basics of a 2D platform game engine I had to
@@ -122,8 +122,8 @@ sprites array. The base entity&#8217;s animation logic cycles through the
 sequence according to the state the entity is in.
 
 If you'd like to see how the animationStates dictionaries are put to
-use, take a look at the
-[source](http://github.com/blacktunnel/morph/tree/game/entity.js#line-48).
+use, take a look at the `animate` and `nextStep` methods in the
+[source](https://github.com/blacktunnel/morph/blob/master/game/entity.js#L50).
 
 ##### Collision Detection
 
