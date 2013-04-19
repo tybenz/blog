@@ -32,21 +32,30 @@ The fun of the game will be choosing the right character for the right
 task. On top of that I&#8217;m really interested in making the game an
 open-world RPG.
 
-##### Rendering
+##### Rendering: Sprites
 Each sprite of the game is drawn within a 9x9 grid. We actually wrote a
 little canvas-based [drawing app](http://blacktunnel.github.io/morph/draw.html)
 to quickly create the sprites. The output of the drawing app is not a
-PNG. It spits out an 2D array of colors for each sprite that is
+PNG. It spits out a 2D array of colors for each sprite that is
 used to initialize the graphics in the game.
 
 Why not use PNGs from the start you ask? We wanted to be able to change
 the size of game&#8217;s sprites down the road. That way, when the time comes,
 we could write different versions for different screen sizes.
 
-So the first step of loading the game is to draw each sprite and cache them
-into an image object for quick rendering later.
+Here's an example of the game with **very** large sprites:
+
+<iframe src="http://blacktunnel.github.io/morph/preview/embed/?level=mini" height="420"></iframe>
+
+So the bulk of each entity's constructor is devoted to drawing each
+sprite and caching them into image objects for quick rendering later.
 
 {% highlight javascript %}
+var i, j, k,
+    tempCanvas, tempContext,
+    dataURL, currentSprite,
+    rectSize = Game.unit / 9;
+
 for ( i in this.bitmaps ) {
     currentSprite = this.bitmaps[ i ];
     tempCanvas = document.createElement( 'canvas' );
@@ -64,6 +73,11 @@ for ( i in this.bitmaps ) {
 }
 {% endhighlight %}
 
+As you can see, I can easily change the size of my sprites by alter a
+single variable: `Game.unit`.
+
+##### Rendering: invalidateRect
+
 The next step was putting the pixels on the screen. We started by simply
 redrawing every entity on every iteration of the game&#8217;s loop. That had
 some performance implications. Mountain Lion&#8217;s Activity Monitor was
@@ -71,6 +85,13 @@ reporting 98% CPU usage while the game was running (more than half on
 the rendering side). So it was time to profile and refactor. We
 implemented a good-ol' invalidateRect algorithm and now we only redraw
 entities that have changed or moved.
+
+Play the video below to see how it works:
+
+<video src="/video/morph-invalidate-rect.mov" preload="auto" controls></video>
+
+
+##### Rendering: Animation
 
 Finally, we needed a way to animate a sprite. Each entity has a list of
 sprites and a variable called activeSprite which is used to put the
@@ -96,9 +117,13 @@ Game.Entity.Enemy.Bird = Game.Entity.Enemy.extend({
 
 Animation states are defined with in the entity&#8217;s constructor and are
 used by the base entity to iterate/cycle through the array of sprites.
-`WINGS_UP` and `WINGS_DOWN` are merely globals for the index into the
+`WINGS_UP` and `WINGS_DOWN` are merely constants for the index into the
 sprites array. The base entity&#8217;s animation logic cycles through the
 sequence according to the state the entity is in.
+
+If you'd like to see how the animationStates dictionaries are put to
+use, take a look at the
+[source](http://github.com/blacktunnel/morph/tree/game/entity.js#line-48).
 
 ##### Collision Detection
 
@@ -151,8 +176,7 @@ but using the machine allows him to turn into a human-like
 character who can pickup and throw rocks. Trust me, that alone is
 entertaining. Try it for yourself:
 
-<iframe src="http://blacktunnel.github.io/morph/preview/iframe.html"
-class="morph"></iframe>
+<iframe src="http://blacktunnel.github.io/morph/preview/embed" height="366"></iframe>
 
 Thanks for reading. If you have experience with game development and you
 noticed that I'm doing things absolutely wrong, please
