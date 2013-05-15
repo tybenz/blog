@@ -148,7 +148,6 @@ header .nav-selection.projects {
 header .profile {
     float: right;
     height: 58px;
-    max-width: 84px;
     margin-top: 14px;
 }
 
@@ -329,5 +328,9 @@ pre {
 
     header .avatar {
         display: block;
+    }
+
+    header .profile {
+        width: 84px;
     }
 }
