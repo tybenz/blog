@@ -1,6 +1,7 @@
 ---
 title: Widget-ize All The Things!
 layout: post
+nav: blog
 hidden: true
 ---
 
