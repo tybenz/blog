@@ -17,7 +17,7 @@ it's a lot of fun, and it just makes life better.
 
 I've seen recently a trend in the world of web development of this topic surfacing
 more and more, and this is my two-cents. In the world of front-end development stock-piling
-a treasure chest of well-written reusable widgets might as well be equivalent to hoarding pure gold.
+a treasure chest of well-written reusable components might as well be equivalent to hoarding pure gold.
 
 Let me break it down for you.
 
@@ -49,7 +49,7 @@ use.
 I love MVC frameworks. On the back-end, on the front-end &mdash; if
 there's a model, view, and controller, I'm doing a happy dance. When it
 comes to writing reusable code, however, there's one thing I can get
-annoyed with pretty easily when dealing with UI widgets in a large-scale
+annoyed with pretty easily when dealing with UI components in a large-scale
 applications. If you do it the "framework" way, it's less reusable by
 definition.
 
@@ -63,9 +63,9 @@ earth didn't I just do it this way from the start?"
 ##### The Holy Grail
 
 That's where option #3 comes in. The compromise between isolated,
-they-just-work widgets and event-driven MVC-friendly widgets.
+they-just-work plugins and event-driven MVC-friendly components.
 
-We're going to find a way to write UI widgets in a way that they can
+We're going to find a way to write UI components in a way that they can
 work well in any context.
 
 ##### What does it look like?
@@ -79,7 +79,7 @@ A solid reusable widget should have the following criteria:
 
 You write widgets with all 4 of those and here's what you'll get.
 
-You'll have widgets that are customizable with options, that do their
+You'll have components that are customizable with options, that do their
 job as their supposed to and that provide ways for other pieces of an
 application to hook into and modify the widget's behavior.
 
@@ -125,6 +125,6 @@ should handle.
 In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
 easier. I've tried to lay out what I think is a template for simple, but
-powerful widgets so that you can go forth and widgetize all of your UI.
+powerful components so that you can go forth and widgetize all of your UI.
 As always feel free to submit any comments/questions on
 [Twitter](http://twitter.com/tybenz).
