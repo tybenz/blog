@@ -9,7 +9,7 @@ If you're a front-end JS dev and that's not what you spend 80% of your time
 doing, you're not doing it right.
 
 The **reduce** and **refactor** are obvious necessities, and admittedly some of the most fun and/or
-most painful parts of the job. In my experience, the reuse goal is often the easiest to acheive.
+most painful parts of the job. In my experience, the **reuse** goal is often the easiest to acheive.
 Yet, somehow, it is often the one most ignored.
 
 Writing code that is purposefully structured to be reusable has immeasurable value. It's not that hard,
