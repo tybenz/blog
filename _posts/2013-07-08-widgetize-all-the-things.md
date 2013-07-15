@@ -128,14 +128,8 @@ this code into a more flexible widget will take time and effort.
 ##### The Sweet Spot
 
 That&#8217;s where option #3 comes in. The compromise between isolated,
-they-just-work plugins and event-driven MVC-friendly components.
-
-We&#8217;re going to find a way to write UI components in a way that they can
-work well in any context.
-
-##### What does it look like?
-
-A solid reusable widget should have the following criteria:
+they-just-work plugins and event-driven MVC-friendly components. A solid
+reusable widget should have the following criteria:
 
 1. Options (and defaults)
 2. DOM event bindings
