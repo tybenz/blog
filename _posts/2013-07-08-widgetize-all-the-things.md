@@ -5,7 +5,7 @@ nav: blog
 hidden: true
 ---
 
-**Reduce, reuse, refactor.** That's what we do as developers _all day_.
+**Reduce, reuse, refactor.** That&#8217;s what we do as developers _all day_.
 The **reduce** and **refactor** are obvious necessities, and admittedly some of the most fun and/or
 most painful parts of the job. In my experience, the **reuse** goal is often the easiest to 
 acheive. Yet, somehow, it is often the one most ignored, in the name of
@@ -26,24 +26,23 @@ There are 3 different approaches when it comes to solving a UI problem or implem
 ##### Black box
 
 The black box approach is one that _every_ web developer is familiar with.
-What I'm referring to is a UI-based plugin that might solve a problem, but requires specific
+What I&#8217;m referring to is a UI-based plugin that might solve a problem, but requires specific
 markup structure,
-or an entire 300 lines of code to accomplish something you could have done in 20. It's a plugin you grab and throw
-in your app/site and it's supposed to just "work". And it does for the most part. The convenience is tempting.
+or an entire 300 lines of code to accomplish something you could have done in 20. It&#8217;s a plugin you grab and throw
+in your app/site and it&#8217;s supposed to just "work". And it does for the most part. The convenience is tempting.
 
 The problem comes when you want to customize/extend the thing to do a
-little something extra. Most plugin authors don't leave room for
+little something extra. Most plugin authors don&#8217;t leave room for
 interaction with the plugin itself. Sure, you got a slideshow widget by
-downloading a couple of files, but what good is it if it's not
-fully-customizable?
+downloading a couple of files, but what good is it if it&#8217;s not
+fully customizable?
 
 ##### Enter the example
 
-The example I'll be using throughout this post is what I call a toggle
-widget. Think of it like a dropdown menu tied to a single link/button.
+The example I&#8217;ll be using throughout this post is what I call a toggle
+widget. It&#8217;s like a dropdown but even simpler.
 Click a button, a panel is shown. Click it again and it goes away.
-
-Let's take a look at the blackbox approach to this widget:
+Let&#8217;s take a look at the blackbox approach to this widget:
 
 {% highlight javascript %}
 $.fn.toggle = function( options ) {
@@ -81,13 +80,13 @@ exactly ideal for integrating into a larger-scale application.
 
 ##### Framework-based
 
-Next up is the framework-based approach to writing components. I'm
-personally a big fan of MVC in app development, but when it comes to
-writing UI components, however, there's one thing I get annoyed with
-often &mdash; if you do it the "framework" way, it's less reusable by
+Next up is the framework-based approach to writing components. I&#8217;m
+personally a big fan of MVC in app development. But, when it comes to
+writing UI components, there&#8217;s one thing I get annoyed with
+often &mdash; if you do it the "framework" way, it&#8217;s less reusable by
 definition.
 
-Here's an example:
+Here&#8217;s an example:
 
 {% highlight javascript %}
 var ToggleView = Backbone.View.extend({
@@ -118,20 +117,20 @@ var toggleView = new ToggleView({
 {% endhighlight %}
 
 Notice that there are no options at all in this view. This is because
-it's custom-made for this application and we (ideally) know what our requirements are
+it&#8217;s custom-made for this application and we (ideally) know what our requirements are
 while growing the codebase.
 
-There's an even bigger problem here, we've just rewritten a common UI
+There&#8217;s an even bigger problem here, we&#8217;ve just rewritten a common UI
 widget in a very specific "Backbone-y" way. All reusability is gone
 (outside of another Backbone project that is). Converting
 this code into a more flexible widget will take time and effort.
 
 ##### The Sweet Spot
 
-That's where option #3 comes in. The compromise between isolated,
+That&#8217;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components.
 
-We're going to find a way to write UI components in a way that they can
+We&#8217;re going to find a way to write UI components in a way that they can
 work well in any context.
 
 ##### What does it look like?
@@ -143,7 +142,7 @@ A solid reusable widget should have the following criteria:
 3. Widget Logic
 4. External events
 
-Let's take a look at some code:
+Let&#8217;s take a look at some code:
 
 {% highlight javascript %}
 var Toggle = function( el, options ) {
@@ -229,15 +228,15 @@ var toggle = new Toggle( '.panel' ); // or $( '.panel' ).toggle();
 {% endhighlight %}
 
 Here have a component that is customizable with options, that does its
-job as it's supposed to and that provides ways for other pieces of an
-application to hook into and modify the its behavior.
+job as it&#8217;s supposed to and that provides ways for other pieces of an
+application to hook into and modify its behavior.
 
-Admittedly, this implementation is much longer, but that's the price of
+Admittedly, this implementation is much longer, but that&#8217;s the price of
 writing something that will work anywhere
 
 ##### Dropdown
 
-Let's take our example even further. Now, we want an actual dropdown.
+Let&#8217;s take our example even further. Now, we want an actual dropdown.
 That is, we want to use our little
 toggle widget but change the contents of the panel to reflect what ever
 items are supposed to be in the dropdown. And we want our widget to be
@@ -329,29 +328,33 @@ var dd = new Dropdown( '.panel', function( data ) {
 
 Live demo [here](http://codepen.io/tybenz/pen/BIvAo).
 
-Notice that the toggle widget does it's normal thing. It's really good
+Notice that the toggle widget does it&#8217;s normal thing. It&#8217;s really good
 at keeping track of whether or not the panel is showing, but it also
-fires events when a hide or show occurs. This let's write
+fires events when a hide or show occurs. This let&#8217;s write
 another component "Dropdown" that listens for the before show event and tweaks the
 markup of the panel to what we need.
 
-Slick huh? Now you've got a widget that can handle a simple UI pattern,
-and it's customizable/extensible enough to do something _really_ useful.
+Slick huh? Now you&#8217;ve got a widget that can handle a simple UI pattern,
+and it&#8217;s customizable/extensible enough to do something _really_ useful.
 
 Not to mention the more-complex dropdown widget follows the same
 principles. It provides options, as well as events for when
 things are hidden/shown.
 
-It's also flexible in other respects.
+It&#8217;s also flexible in other respects.
 The markup generation for the dropdown is left outside of the widget. That
-should be left up to the developer to do as they please. (In this case, I'm using
-data attributes and a templating engine to generate the markup.)
+should be left up to the developer to do as they please. In this case, I&#8217;m using
+data attributes and a templating engine to generate the markup.
 
 ##### Wrap up
 
 In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
-easier. I've tried to lay out what I think is a template for simple, but
+easier. Give it a try and you&#8217;ll find that building out a library of
+these types of components is extremely rewarding and in general, it will
+make you a better developer.
+
+I&#8217;ve tried to lay out what I think is a template for simple, but
 powerful components so that you can go forth and widgetize all of your UI.
 As always feel free to submit any comments/questions on
 [Twitter](http://twitter.com/tybenz).
