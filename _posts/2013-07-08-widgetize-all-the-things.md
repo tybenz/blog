@@ -2,7 +2,6 @@
 title: Widget-ize All The Things!
 layout: post
 nav: blog
-hidden: true
 ---
 
 **Reduce, reuse, refactor.** That&#8217;s what we do as developers _all day_.
