@@ -165,9 +165,11 @@ Also, if you haven&#8217;t noticed, our example widget is extremely
 simple. But I wanted to show how small components can be used to do cool
 things (especially when they leverage CSS).
 <a href="/demos/widgetize/secret5.html" target="_blank">Here&#8217;s</a> an example I made to show
-that. The example consists of 91 secret widgets lined up side-by-side.
+that. The example consists of a whole bunch of secret widgets lined up side-by-side.
 Each widget contains an image and the widget&#8217;s applyClass toggle's
-the visibility of the image. We use the events mouseover and mouseout for this one,
+the visibility of the image. I'm also using some CSS trickery here to
+shift the child image a certain amount so that they all have the same
+top and left coordinates. We use the events mouseover and mouseout for this one,
 giving the effect that hovering over the image from left/right scrubs a
 rotating animation.
 
@@ -177,7 +179,10 @@ In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
 easier. Give it a try and you&#8217;ll find that building out a library of
 these types of components is extremely rewarding and in general, it will
-make you a better developer.
+make you a better developer. And if you don&#8217;t have the time to
+roll your own, I hope you&#8217;ll at least
+research some widget-based frameworks and begin to "think reusable" when
+faced with a UI problem.
 
 I&#8217;ve tried to lay out what I think is a template for simple, but
 powerful components so that you can go forth and widgetize all of your UI.
