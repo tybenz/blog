@@ -31,7 +31,7 @@ or an entire 300 lines of code to accomplish something you could have done in 20
 in your app/site and it&#8217;s supposed to just "work". And it does for the most part. The convenience is tempting.
 
 The problem comes when you want to customize/extend the thing to do a
-little something extra. Most plugin authors don&#8217;t leave room for
+little something extra. Most plugins don&#8217;t leave room for
 interaction with the plugin itself. Sure, you got a slideshow widget by
 downloading a couple of files, but what good is it if it&#8217;s not
 fully customizable?
@@ -188,5 +188,7 @@ powerful components so that you can go forth and widgetize all of your UI.
 As always feel free to submit any comments/questions on
 [Twitter](http://twitter.com/tybenz).
 
-\* To clarify, I have nothing against jQuery plugins. It&#8217;s just
-that jQuery Plugin authors can be extremely lazy.
+\* To clarify, I have nothing against jQuery plugins. In my experience
+most jQuery plugins are written to solve a specific problem. They do
+their job well but they don&#8217;t necessarily provide
+the options and events to modify/extend behavior.
