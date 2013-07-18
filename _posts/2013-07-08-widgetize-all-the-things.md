@@ -105,7 +105,7 @@ they-just-work plugins and event-driven MVC-friendly components. A solid
 reusable widget should have the following criteria:
 
 1. Options (and defaults)
-2. DOM event bindings
+2. Browser/User events
 3. Widget Logic
 4. External events
 
