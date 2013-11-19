@@ -12,7 +12,7 @@ Mobile](http://jquerymobile.com),
 [ThemeRoller](http://jquerymobile.com/themeroller), and [Muse](http://adobe.com/muse).
 
 I have an amazing family, including my beautiful wife Amy, my
-eighteen-month-old son, Brody, and a new baby girl on the way (ETA: October).
+two-year-old son, Brody, and a new baby girl, Grace.
 
 I've been playing music for about 10 years. I dabble in a lot of different
 instruments but my true love is the elctric guitar. I've played with
