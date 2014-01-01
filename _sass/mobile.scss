@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5 {
     color: $darkGrey;
     font-family: $headingFamily;
     font-weight: normal;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.05em;
     margin: 0.4em 0;
     a {
         color: inherit;
@@ -120,30 +120,33 @@ header nav ul li {
 }
 
 header .nav-slider {
-    height: 10px;
+    height: 3px;
     background-color: $black;
     position: relative;
 }
 
 header .nav-selection {
     position: absolute;
-    height: 10px;
+    height: 3px;
     background-color: $blue;
+    @include transition-property (transform);
+    @include transition-duration(0.05s);
+    @include transition-timing-function(linear);
 }
 
 header .nav-selection.about {
     width: 44px;
-    left: 49px;
+    @include transform(translateX(51px));
 }
 
 header .nav-selection.blog {
     width: 33px;
-    left: 0;
+    @include transform(translateX(0));
 }
 
 header .nav-selection.projects {
-    width: 60px;
-    left: 107px;
+    width: 59px;
+    @include transform(translateX(114px));
 }
 
 header .profile {
@@ -185,7 +188,7 @@ footer ul {
 }
 
 footer nav {
-    border-width: 10px 0 0;
+    border-width: 3px 0 0;
     border-style: solid;
     border-color: $black;
     padding-top: 20px;
@@ -289,13 +292,13 @@ ul {
 .pagination a.previous span:before {
     content: "←";
     position: absolute;
-    left: -30px;
+    left: -1.5rem;
 }
 
 .pagination a.next span:after {
     content: "→";
     position: absolute;
-    left: 50px;
+    left: 2.8rem;
 }
 
 pre, .highlight pre, .highlight code {
