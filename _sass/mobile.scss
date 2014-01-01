@@ -122,7 +122,7 @@ header nav ul li {
 
 header nav.subnav {
   z-index: 2;
-  margin: 10px 0 -40px;
+  margin: 7px 0 -40px;
   position: absolute;
   right: 0;
 }
@@ -164,7 +164,7 @@ header .nav-selection.projects {
 
 header .subnav-selection {
   position: absolute;
-  height: 10px;
+  height: 3px;
   background-color: $black;
   width: 50px;
   @include transition-property (right);
@@ -184,7 +184,7 @@ header .subnav-selection.walkie-hubot {
 
 header .subnav-selection.download {
   right: 0;
-  width: 69px;
+  width: 71px;
 }
 
 header .subnav-selection.vimdeck-home {
@@ -198,13 +198,13 @@ header .subnav-selection.vimdeck-docs {
 }
 
 header .subnav-selection.exemplar-home {
-  right: 140px;
-  width: 42px;
+  right: 145px;
+  width: 44px;
 }
 
 header .subnav-selection.exemplar-docs {
-  right: 87px;
-  width: 35px;
+  right: 91px;
+  width: 34px;
 }
 
 header .profile {
