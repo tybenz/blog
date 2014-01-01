@@ -95,6 +95,7 @@ p {
 .container {
     @include outer-container;
     max-width: 780px;
+    position: relative;
 }
 
 header a {
