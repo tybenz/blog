@@ -119,6 +119,18 @@ header nav ul li {
     }
 }
 
+header nav.subnav {
+  z-index: 2;
+  margin: 10px 0 -40px;
+  position: absolute;
+  right: 0;
+}
+
+header .subnav a {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
 header .nav-slider {
     height: 3px;
     background-color: $black;
@@ -147,6 +159,51 @@ header .nav-selection.blog {
 header .nav-selection.projects {
     width: 59px;
     @include transform(translateX(114px));
+}
+
+header .subnav-selection {
+  position: absolute;
+  height: 10px;
+  background-color: $black;
+  width: 50px;
+  @include transition-property (right);
+  @include transition-duration(0.05s);
+  @include transition-timing-function(linear);
+}
+
+header .subnav-selection.walkie-home {
+  right: 150px;
+  width: 42px;
+}
+
+header .subnav-selection.walkie-hubot {
+  right: 88px;
+  width: 44px;
+}
+
+header .subnav-selection.download {
+  right: 0;
+  width: 69px;
+}
+
+header .subnav-selection.vimdeck-home {
+  right: 52px;
+  width: 42px;
+}
+
+header .subnav-selection.vimdeck-docs {
+  right: 0px;
+  width: 34px;
+}
+
+header .subnav-selection.exemplar-home {
+  right: 140px;
+  width: 42px;
+}
+
+header .subnav-selection.exemplar-docs {
+  right: 87px;
+  width: 35px;
 }
 
 header .profile {

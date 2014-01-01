@@ -3,6 +3,7 @@ layout: default
 project: true
 nav: projects
 title: Ajax Append
+hidden: true
 fork:
 zip:
 tar:
