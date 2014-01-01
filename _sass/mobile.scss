@@ -3,8 +3,9 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-$sansFamily: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$headingFamily: 'Bebas Neue', Helvetica, Arial, sans-serif;
+$sansFamily: 'Ubuntu', Helvetica, Arial, sans-serif;
+$headingFamily: 'Ubuntu Condensed', Helvetica, Arial, sans-serif;
+$codeFamily: 'Ubuntu Mono', monospace;
 $white: #FFFFFF;
 $black: #111;
 $darkGrey: #222;
@@ -13,11 +14,12 @@ $lightGrey: #ccc;
 $blue: #6EC5FF;
 $indigo: #5EA5FF;
 
-body {
+html {
     font-family: $sansFamily;
+    font-weight: 100;
     margin: 0;
     color: $grey;
-    font-size: 1.2em;
+    font-size: 16px;
 }
 
 a {
@@ -32,9 +34,8 @@ a:hover {
 h1, h2, h3, h4, h5 {
     color: $darkGrey;
     font-family: $headingFamily;
-    text-transform: uppercase;
     font-weight: normal;
-    line-height: 0.8em;
+    letter-spacing: -0.05rem;
     margin: 0.4em 0;
     a {
         color: inherit;
@@ -54,27 +55,31 @@ video {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 3.5em;
+    font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 3em;
+    font-size: 2rem;
 }
 
 h4 {
-    font-size: 2.5em;
+    font-size: 1.5rem;
 }
 
 h5 {
-    font-size: 2em;
+    font-size: 1.2rem;
+}
+
+h5.logo {
+    font-size: 1.6rem;
 }
 
 h1.hero {
-    font-size: 4.5em;
+    font-size: 4.5rem;
     margin: 0.3em 0 0.1em;
 }
 
@@ -105,10 +110,6 @@ header nav ul {
     list-style: none;
     padding: 0;
     margin: 0 0 10px;
-}
-
-header .logo {
-    font-style: italic;
 }
 
 header nav ul li {
@@ -161,7 +162,7 @@ header .social img {
     margin: 9px 0;
 }
 
-header .avatar {
+header .avatar, header .avatar-large {
     height: 58px;
     border: 2px solid $black;
     float: left;
@@ -169,12 +170,18 @@ header .avatar {
     display: none;
 }
 
+header .avatar-large {
+    display: none;
+}
+
 footer {
+    font-size: 0.8rem;
     margin-top: 30px;
 }
 
 footer ul {
     padding: 0;
+    font-size: 0.8rem;
 }
 
 footer nav {
@@ -198,7 +205,7 @@ footer nav ul li {
 ul, ol {
     line-height: 1.5em;
     padding-left: 20px;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 ul {
@@ -206,7 +213,7 @@ ul {
 }
 
 .post {
-    border-top: 1px solid $darkGrey;
+    border-top: 1px solid $lightGrey;
     margin-bottom: 5em;
 }
 
@@ -217,7 +224,7 @@ ul {
 .post-header .date {
     font-family: $sansFamily;
     text-decoration: lowercase;
-    margin: 1em 0 -1.2em;
+    margin: 1.5em 0 -1.7em;
 }
 
 #projects {
@@ -237,7 +244,7 @@ ul {
 }
 
 .project h2 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .project:nth-child(2n) {
@@ -256,7 +263,7 @@ ul {
     text-align: center;
     margin-bottom: 10px;
     font-family: $headingFamily;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .key-selector a {
@@ -264,7 +271,7 @@ ul {
     padding: 0.5em 0.4em 0.4em;
     margin-right: 0.4em;
     font-family: $sansFamily;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 .key-selector a.active {
@@ -291,8 +298,12 @@ ul {
     left: 50px;
 }
 
-pre {
-    font-family: 'Source Code Pro', monospace;
+pre, .highlight pre, .highlight code {
+    font-family: $codeFamily;
+    font-weight: normal;
+    word-wrap: normal;
+    font-size: 1rem;
+    line-height: 1.3em;
 }
 
 .chords {
@@ -305,29 +316,54 @@ pre {
 
 .post img {
   display: inline-block;
-  @include box-shadow(0 0 1px 1px rgba(0,0,0,0.3));
+  margin-bottom: 1em;
 }
 
 @media only screen and (min-width: 40em) {
-    h1.hero {
-        font-size: 6.5em;
-        margin: 0.3em 0 0.1em;
+    html {
+      font-size: 22px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+    }
+
+    h5 {
+        font-size: 2rem;
     }
 
     .project {
         @include span-columns(6);
+        min-height: 13.1rem;
     }
 
     .pagination a {
-        @include span-columns(3);
-    }
-
-    .project h2 {
-        font-size: 3.5em;
+        @include span-columns(6);
     }
 
     header .avatar {
         display: block;
+        @include hidpi(1.5) {
+            display: none;
+        }
+    }
+
+    header .avatar-large {
+        @include hidpi(1.5) {
+            display: block;
+        }
     }
 
     header .profile {

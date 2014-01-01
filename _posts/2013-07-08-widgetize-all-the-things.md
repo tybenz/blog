@@ -22,7 +22,7 @@ There are 3 different approaches when it comes to solving a UI problem or implem
 2. Framework-based
 3. The sweet spot
 
-##### Blackbox
+#### Blackbox
 
 The blackbox approach is one that _every_ web developer is familiar with.
 What I&#8217;m referring to is a UI-based plugin that solves a problem, but
@@ -36,7 +36,7 @@ interaction with the plugin itself. Sure, you got a slideshow widget by
 downloading a couple of files, but what good is it if it&#8217;s not
 fully customizable?
 
-##### Enter the example
+#### Enter the example
 
 The example I&#8217;ll be using throughout this post is what I call a "secret"
 widget. The pattern we're going for is simple: mousedown -> add a class,
@@ -66,7 +66,7 @@ application to perform an action when the class is applied? There's
 nothing external for integration and not enough options for it to do
 what I want.
 
-##### Framework-based
+#### Framework-based
 
 Next up is the framework-based approach to writing components. I&#8217;m
 personally a big fan of MVC in app development. But, when it comes to
@@ -98,7 +98,7 @@ widget in a very specific "Backbone-y" way. All reusability is gone
 (outside of another Backbone project that is). Converting
 this code into a more flexible widget will take time and effort.
 
-##### The Sweet Spot
+#### The Sweet Spot
 
 That&#8217;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components. A solid
@@ -129,7 +129,7 @@ Here we have a component that is customizable with options, that does its
 job as it&#8217;s supposed to and that provides ways for other pieces of an
 application to hook into and modify its behavior.
 
-##### Time to extend
+#### Time to extend
 
 Let&#8217;s try to extend this widget's behavior. What if I had two divs
 on the page each with their own secret? And, let&#8217;s say I want to
@@ -172,7 +172,7 @@ top and left coordinates. We use the events mouseover and mouseout for this one,
 giving the effect that hovering over the image from left/right scrubs a
 rotating animation.
 
-##### Wrap up
+#### Wrap up
 
 In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
