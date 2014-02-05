@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My Hour Of Code"
+nav: blog
 ---
 
 This past week was [code.org's](http://code.org) first [Computer Science Education Week](http://csedweek.org). They set a goal of getting 10 million students worldwide to participate
