@@ -2,11 +2,7 @@
 layout: post
 title: "Taking advantage of sessions in Vim"
 nav: blog
-hidden: true
 ---
-
-I'm a VIM fanatic, and I'm always on the lookout for ways to improve my
-workflow.
 
 A few months ago, on my daily hunt for new, useful VIM plugins, I discovered
 [vim-startify](http://github.com/mhinz/vim-startify). Startify is a beautiful
