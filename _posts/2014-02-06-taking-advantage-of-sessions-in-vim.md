@@ -24,7 +24,7 @@ loaded, what your tabs and windows are doing.  Because of this, a `mksession`
 file can be really large and really ugly. I actually found that most of the
 things `mksession` was saving to be a bit redudant. For the most part, the
 scripts I want executed when I launch VIM are all present in my `.vimrc`. So I
-took the bits that I needed and starting creating my own session files.
+took the bits that I needed and starting creating my own session files by hand.
 
 The only commands I really need in a project-specific session have to do with
 changing VIM's working directory, opening files into buffers, and choosing
@@ -34,10 +34,10 @@ split panes).
 Here's one of my session files (vimdeck.vim):
 
 <div class="highlight">
-<pre><code><strong>cd</strong> ~/src/vimdeck
-<strong>args</strong> lib/* lib/templates/* bin/vimdeck Rakefile Gemfile README.md slides.md
-<strong>edit</strong> slides.md vert
-<strong>sb</strong> lib/vimdeck.rb</code></pre>
+<pre><code><span class="k">cd</span> ~/src/vimdeck
+<span class="k">args</span> lib/* lib/templates/* bin/vimdeck Rakefile Gemfile README.md slides.md
+<span class="k">edit</span> slides.md
+<span class="k">vertical sb</span> lib/vimdeck.rb</code></pre>
 </div>
 
 I change the working directory to the project folder, open files into buffers,
