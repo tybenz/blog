@@ -12,7 +12,8 @@ links that I visit on a daily basis with the world.
 
 Introducing **spamthe.net** &mdash; my very own link spammer. Follow on twitter
 ([@spamthenet](http://twitter.com/spamthenet)), bookmark in your browser
-([spamthe.net](http://spamthe.net)) \*, or join the IRC channel on Freenode
+([spamthe.net](http://spamthe.net)) \*, subscribe to the weekly newsletter
+([here](http://spamthe.net)), or join the IRC channel on Freenode
 ([#spamthenet](http://webchat.freenode.net)).
 
 The links themselves can be found easily by anyone else who is as obsessed
@@ -35,8 +36,14 @@ Join the channel if you feel like chatting with cool people while you wait for
 the links to pour in.
 
 [Click here](http://github.com/tybenz/spamthe.net/tree/master) to check out the
-awful source.  Also don't forget to bookmark [spamthe.net](http://spamthe.net),
-follow [@spamthenet](http://spamthe.net), and join us on IRC.
+awful source. If you're interested in helping me collect links, ping me on IRC
+(tybenz) or Twitter ([@tybenz](http://twitter.com/tybenz)) and be sure to check the
+[contributing](https://github.com/tybenz/spamthe.net#contributing) section of the
+README.
+
+Also don't forget to bookmark [spamthe.net](http://spamthe.net), sign up for
+our newsletter, follow [@spamthenet](http://spamthe.net), and join us on IRC.
+Or maybe just one of those, if you feel doing all of them would be redudant.
 
 \* I know the site has spam in the title. So here's a screenshot for all you out
 there who are too scared to actually click on the link:
