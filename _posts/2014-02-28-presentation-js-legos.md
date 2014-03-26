@@ -7,9 +7,9 @@ nav: blog
 I'm presenting at [jQuery Europe](http://gentics.com/jquery-europe) today. The
 talk is an adaptation from a [previous blog
 post](http://tybenz.com/post/widgetize-all-the-things) about resuable UI
-components in JavaScript.
-
-Live stream here: http://gentics.com/jquery-europe
+components in JavaScript. I've also given versions of the talk at [jQuery San
+Diego](http://events.jquery.org/2014/san-diego/) and
+[SSDG](http://www.meetup.com/The-Sonora-Software-Developers-Group/).
 
 Slides are posted here: http://tybenz.com/presentation-js-legos
 
@@ -18,3 +18,9 @@ It's really just meant to be a repository of more in-depth code samples of the k
 presented in the talk. Feel free to check it out:
 
 http://tybenz.com/legojs
+
+
+Here's a recording of the talk from [jQuery Europe](http://www.gentics.com/jquery-eu-2014/page/2014/eu.html):
+<div class="video-container skinny">
+  <iframe src="http://uvp.videoservice.apa.at/Player/Flash/06574eb3-319c-4a81-9912-cb6b6da195f1" frameborder="0" allowfullscreen="1"></iframe>
+</div>
