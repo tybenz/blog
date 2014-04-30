@@ -29,7 +29,7 @@ focus on code snippets. I want to make it a place where developers get
 equipped in every way they need.
 
 ####The Plan
-Offer the soliders (developers) a chance to stock up on weapons
+Offer the soldiers (developers) a chance to stock up on weapons
 (snippets), load up on ammo (frameworks/libraries), engage in training
 (walkthroughs) and choose their
 barracks (development environments). The latter will most likely allow

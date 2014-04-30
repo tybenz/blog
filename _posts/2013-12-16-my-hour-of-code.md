@@ -8,7 +8,7 @@ This past week was [code.org's](http://code.org) first [Computer Science Educati
 in an hour of code (they ended up with over 16 million). Code.org and many other participating organizations created self-guided tutorials to walk students through the fundamentals
 of programming.
 
-I was able to help out at a [Hickman Charter School](http://hcs.hickmanschools.org) by adding a short presentation on what code is all about. I'm extrememly appreciative of
+I was able to help out at a [Hickman Charter School](http://hcs.hickmanschools.org) by adding a short presentation on what code is all about. I'm extremely appreciative of
 code.org's efforts to educate young people on such an important topic. Here's some photos from the event:
 
 ![](https://raw.github.com/tybenz/awes0.me/gh-pages/hoc1.jpg)

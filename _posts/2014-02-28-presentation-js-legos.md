@@ -6,7 +6,7 @@ nav: blog
 
 I'm presenting at [jQuery Europe](http://gentics.com/jquery-europe) today. The
 talk is an adaptation from a [previous blog
-post](http://tybenz.com/post/widgetize-all-the-things) about resuable UI
+post](http://tybenz.com/post/widgetize-all-the-things) about reusable UI
 components in JavaScript. I've also given versions of the talk at [jQuery San
 Diego](http://events.jquery.org/2014/san-diego/) and
 [SSDG](http://www.meetup.com/The-Sonora-Software-Developers-Group/).

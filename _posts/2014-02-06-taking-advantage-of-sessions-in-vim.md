@@ -18,7 +18,7 @@ like any other vim script). The `mksession` command, out-of-the-box, stores ever
 little detail about your current session &mdash; plugins, scripts, which buffers are
 loaded, what your tabs and windows are doing.  Because of this, a `mksession`
 file can be really large and really ugly. I actually found that most of the
-things `mksession` was saving to be a bit redudant. For the most part, the
+things `mksession` was saving to be a bit redundant. For the most part, the
 scripts I want executed when I launch VIM are all present in my `.vimrc`. So I
 took the bits that I needed and starting creating my own session files by hand.
 

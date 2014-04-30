@@ -43,7 +43,7 @@ README.
 
 Also don't forget to bookmark [spamthe.net](http://spamthe.net), sign up for
 our newsletter, follow [@spamthenet](http://spamthe.net), and join us on IRC.
-Or maybe just one of those, if you feel doing all of them would be redudant.
+Or maybe just one of those, if you feel doing all of them would be redundant.
 
 \* I know the site has spam in the title. So here's a screenshot for all you out
 there who are too scared to actually click on the link:
