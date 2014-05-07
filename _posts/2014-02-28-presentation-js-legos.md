@@ -22,5 +22,5 @@ http://tybenz.com/legojs
 
 Here's a recording of the talk from [jQuery Europe](http://www.gentics.com/jquery-eu-2014/page/2014/eu.html):
 <div class="video-container skinny">
-  <iframe src="//www.youtube.com/embed/S0xH8RxFaBg" frameborder="0" allowfullscreen></iframe>
+  <iframe src="//www.youtube.com/embed/S0xH8RxFaBg?start=233" frameborder="0" allowfullscreen></iframe>
 </div>
