@@ -1,0 +1,20 @@
+---
+layout: default
+nav: projects
+title: Projects
+---
+
+<div class="posts">
+  {% for page in site.pages %}
+    {% if page.project == true %}
+      {% if page.hidden != true %}
+        {% if page.link %}
+          <a class="post" href="{{ page.link }}">
+        {% else %}
+          <a class="post" href="{{ page.url | replace: '/index.html', '' }}">
+        {% endif %}
+        {{ page.title }}: {{page.summary}}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>
