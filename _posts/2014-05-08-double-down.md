@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stacking The Deck"
+title: "Double Down"
 hidden: true
 nav: blog
 ---
@@ -51,4 +51,4 @@ I love the web and I want to see it win, and I don't have to leave that up to a
 bunch of Blackjack dealers. I'm going to bet on the web because I'm going to be one of the ones
 driving the dang thing forward.
 
-*This text was also posted to the [Pastry Box Project](http://pastry-box-project)*
+*\* This text was also posted to the [Pastry Box Project](http://the-pastry-box-project.net) \**
