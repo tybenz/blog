@@ -15,7 +15,6 @@ task :generate do
   exec(<<-CMD)
     set -e
     jekyll --no-auto --pygments;
-    sass --update _sass:_site/css -f;
     git checkout gh-pages;
     cp -r _site/* .;
     rm -Rf _site;
@@ -31,17 +30,15 @@ task :default => [:watch]
 
 desc "Watch the site and regenerate when it changes"
 task :watch do
-  puts "Starting to watch source with Jekyll and Sass..."
-  system "sass --update _sass:css -f -l -r ./_sass/bourbon/lib/bourbon.rb"
+  puts "Starting to watch source with Jekyll..."
   jekyllPid = Process.spawn("jekyll --auto --server")
-  sassPid = Process.spawn("sass --watch _sass:css -l -r ./_sass/bourbon/lib/bourbon.rb")
 
   trap("INT") {
-    [jekyllPid, sassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [jekyllPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  [jekyllPid, sassPid].each { |pid| Process.wait(pid) }
+  [jekyllPid].each { |pid| Process.wait(pid) }
 end # task :watch
 
 desc "Publish gh-pages to the appropriate repo/branch"
