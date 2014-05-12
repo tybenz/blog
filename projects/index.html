@@ -9,11 +9,11 @@ title: Projects
     {% if page.project == true %}
       {% if page.hidden != true %}
         {% if page.link %}
-          <a class="post" href="{{ page.link }}">
+          <a class="post-link" href="{{ page.link }}">
         {% else %}
-          <a class="post" href="{{ page.url | replace: '/index.html', '' }}">
+          <a class="post-link" href="{{ page.url | replace: '/index.html', '' }}">
         {% endif %}
-        {{ page.title }}: {{page.summary}}</a>
+        <strong>{{ page.title }}</strong>: {{page.summary}}</a>
       {% endif %}
     {% endif %}
   {% endfor %}
