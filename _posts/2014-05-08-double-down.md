@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Double Down"
-hidden: true
 nav: blog
 ---
 
