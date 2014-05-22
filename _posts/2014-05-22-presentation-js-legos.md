@@ -12,7 +12,9 @@ Europe](http://gentics.com/jquery-europe), [jQuery San
 Diego](http://events.jquery.org/2014/san-diego/) and
 [SSDG](http://www.meetup.com/The-Sonora-Software-Developers-Group/).
 
-Slides are posted here: http://tybenz.com/presentation-js-legos
+Slides are posted here:
+
+<http://tybenz.com/presentation-js-legos>
 
 Also, I'm releasing this small open-source UI component library as part of the talk, called **lego.js**.
 It's really just meant to be a repository of more in-depth code samples of the kind of components
