@@ -20,7 +20,7 @@ The links themselves can be found easily by anyone else who is as obsessed
 with the above-mentioned resources as I am. But the fun part was building it.
 
 I use [GitHub Pages](http://pages.github.com) to host the site and a node.js
-(ew) app to update twitter and the blog simultaneously. Oh, and I wrote a
+app to update twitter and the blog simultaneously. Oh, and I wrote a
 bookmarklet so that I can just click a button from within a site and send it to
 the spammer.
 
